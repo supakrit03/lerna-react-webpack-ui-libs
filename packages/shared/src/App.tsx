@@ -1,16 +1,5 @@
-import Header from "./components/Header";
+import ReactDOM from "react-dom/client";
 
-type Props = {};
-
-const App = (props: Props) => {
-  return (
-    <>
-      <div>
-        <Header />
-        App test test 123
-      </div>
-    </>
-  );
-};
-
-export default App;
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+  <div>App react</div>
+);

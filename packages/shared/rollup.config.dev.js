@@ -7,7 +7,7 @@ import replace from "@rollup/plugin-replace";
 import livereload from "rollup-plugin-livereload";
 
 export default {
-  input: ["src/main.tsx"],
+  input: ["src/App.tsx"],
   output: {
     file: "dist/bundle.js",
     format: "iife",

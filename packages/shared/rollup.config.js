@@ -1,13 +1,13 @@
 import typescript from "rollup-plugin-typescript2";
 
-export default {
-  input: ["src/components/index.tsx"],
-  output: {
-    dir: "dist",
-    entryFileNames: "[name].js",
-    format: "cjs",
-    exports: "named",
+export default [
+  {
+    input: ["src/index.tsx"],
+    output: {
+      file: "dist/index.js",
+      format: "cjs",
+    },
+    plugins: [typescript()],
+    external: ["react"],
   },
-  plugins: [typescript()],
-  external: ["react"],
-};
+];
