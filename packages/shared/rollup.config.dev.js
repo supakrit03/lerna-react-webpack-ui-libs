@@ -1,4 +1,4 @@
-import typescript from "rollup-plugin-typescript2";
+import typescript from "@rollup/plugin-typescript";
 import serve from "rollup-plugin-serve";
 import babel from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -14,7 +14,7 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    typescript(),
+    typescript({ tsconfig: "./tsconfig.json" }),
     nodeResolve({
       extensions: [".js"],
     }),
